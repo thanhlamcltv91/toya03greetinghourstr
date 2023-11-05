@@ -46,13 +46,16 @@ greeting('21:00')            | Good evening!          | 13
 greeting('2100')             | Good evening!          | 14
 
 """
+
 #endregion debai
+
 
 #region bailam
 def greeting(hour_str):
   return 'todo'
-  
 
-if __name__=='__main__':
+
+#push to git
+if __name__ == '__main__':
   pass
 #endregion bailam
