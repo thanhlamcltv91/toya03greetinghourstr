@@ -55,7 +55,7 @@ def greeting(hour_str):
   # Chuyển đổi chuỗi giờ thành số nguyên
   hour = int(
       hour_str.replace(' ', '').replace('am', '').replace('AM', '').replace(
-          'pm', '').replace(':', '')[:2])
+          'pm', '').replace('PM', '').replace(':', '')[:2])
   # Nếu chuỗi giờ có chứa 'pm' thì cộng thêm 12 để đổi sang định dạng 24 giờ
   if 'pm' in hour_str.lower():
     hour += 12
