@@ -52,10 +52,22 @@ greeting('2100')             | Good evening!          | 14
 
 #region bailam
 def greeting(hour_str):
-  return 'todo'
+  # Chuyển đổi chuỗi giờ thành số nguyên
+  hour = int(
+      hour_str.replace(' ', '').replace('am', '').replace('AM', '').replace(
+          'pm', '').replace(':', '')[:2])
+  # Nếu chuỗi giờ có chứa 'pm' thì cộng thêm 12 để đổi sang định dạng 24 giờ
+  if 'pm' in hour_str.lower():
+    hour += 12
+  # In ra câu chào theo buổi trong ngày
+  if 0 <= hour < 12:
+    return 'Good morning!'
+  elif 12 <= hour < 18:
+    return 'Good afternoon!'
+  else:
+    return 'Good evening!'
 
 
-#push to git
 if __name__ == '__main__':
   pass
 #endregion bailam
